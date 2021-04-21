@@ -29,21 +29,18 @@ def bakburp(threadName, q):
         if html == 200:
             err = len(conn.content)
             if err < 1000000:
-                print('\r'+'Code：%s -----（可能误报)--大小：%s  ----- 目标：%s' % (html,err,geturl)+'\n',end='', flush=True,)
+                print('\r'+f'\033[33m[*]\033[33mCode：%s -----（可能误报)--大小：%s  ----- 目标：%s  \n' % (html,err,geturl),end='', flush=True)
             else:
-                print('\r' + 'Code：%s ----- 文件存在--大小：%s  ----- 目标：%s' % (html, err, geturl) + '\n', end='',flush=True, )
+                print('\r'+f'\033[32m[*]\033[32m Code：%s ----- 文件存在--大小：%s  ----- 目标：%s  \n' % (html, err, geturl), end='',flush=True)
             # print('Code：%s ----- 文件存在--大小：%s ----- 目标：%s' % (html, err, geturl) )
             s.close()
             conn.close()
         else:
-            print('\r'+'Code：%s ----- 不存在 ----- 目标：%s' % (html,geturl),end='', flush=True)
-            # print('Code：%s ----- 不存在 ----- 目标：%s' % (html, geturl))
+            print('\r'+geturl+'\r',end='', flush=True)
             s.close()
             conn.close()
     except Exception as e:
-        # print(e)
-        print('\r'+'Code：%s ----- 不存在 ----- 目标：%s' % (html,geturl),end='', flush=True)
-        # print('Code：%s ----- 不存在 ----- 目标：%s' % (html, geturl))
+        print('\r'+geturl+'\r',end='', flush=True)
 
 def run():
     headers = {
