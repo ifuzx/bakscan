@@ -7,3 +7,7 @@ python3 bakscan.py -s '<此处为fofa查询条件，建议添加status_code="200
 备份扫描参考t00ls某位老哥，改动部分逻辑，使bakscan可以多线程的完成扫描
 
 使用前添加Fofa高级会员email，key
+
+# bakscan v1.1
+使输出识别性高点
+尽量输出不重叠
