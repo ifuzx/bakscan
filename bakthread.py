@@ -80,7 +80,7 @@ def run():
                     url = i + '/' + top + end
                     newlink_list.append(url)
         elif i.startswith("http://"):
-            ex_domain = i.replace("https://", "").split('.')
+            ex_domain = i.replace("http://", "").split('.')
             for index in hz:
                 url = i + '/' + i.replace("http://", "") + index
                 newlink_list.append(url)
