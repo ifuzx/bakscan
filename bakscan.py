@@ -15,12 +15,11 @@ banner = '''
 | |_  ___ | |__ ___ | |_  ___  ___ | |__
 | . \<_> || / // | '| . |/ ._>/ | '| / /
 |___/<___||_\_\\_|_.|_|_|\___.\_|_.|_\_\
-                            author:mfsva    v 1.1
+                            author:mfsva    v 1.2
 
 please input email，key 
 
 example:
-    python3 bakscan.py -s '<search>'
     python3 bakscan.py -s 'body="thinkphp" && after="2021-01-01"'
 '''
 
@@ -98,5 +97,5 @@ if __name__ == '__main__':
         print("查询条数：" + search_size )
         print("文件runoob.txt写入成功")
     except BaseException :
-        print('{"errmsg":"The search query contains invalid byte","error":true}')
+        sys.exit()
     bakfilescan()
