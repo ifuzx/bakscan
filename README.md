@@ -8,9 +8,5 @@ bakthread.py参考t00ls某位老弟，基础字典不变，改动域名爆破逻
 
 使用前添加Fofa高级会员email，key
 
-# bakscan v1.1
-使输出识别性高点
-尽量输出不重叠
-
 # bakscan v1.2
 修改部分异常
